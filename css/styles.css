@@ -1,0 +1,176 @@
+:root {
+  --main-font: "IBM Plex Sans", sans-serif;
+  --body-color: #f6ebfc;
+  --dark-purple: #591182;
+  --logo-color: #f2f5cf;
+  --logo-focus: #d6d9b1;
+  --light-text-color: #f9f9f3;
+  --icon-color: #e8bde6;
+  --icon-focus: #c49fc3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--main-font);
+  background-color: var(--body-color);
+}
+
+/**
+  |============================
+  | HEADER
+  |============================
+*/
+.header {
+  background-color: var(--dark-purple);
+}
+
+.header-container {
+  height: 75px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  margin-right: 70px;
+  font-family: "Concert One", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--logo-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-link:hover,
+.logo-link:focus {
+  color: var(--logo-focus);
+}
+
+.navigation {
+  margin-right: auto;
+}
+
+.nav-list {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-link {
+  color: var(--light-text-color);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #dededa;
+}
+
+.cart-icon {
+  fill: var(--logo-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cart-icon:focus,
+.cart-icon:hover {
+  fill: var(--logo-focus);
+  transform: scale(1.2);
+}
+
+/**
+  |============================
+  | FOOTER
+  |============================
+*/
+
+.footer {
+  background-color: var(--dark-purple);
+  padding: 60px 0;
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.logo-p-container {
+}
+
+.p-a-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.p-a-link {
+  color: var(--light-text-color);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+.p-a-icon {
+  fill: var(--icon-color);
+}
+
+.p-a-icon:focus,
+.p-a-icon:hover {
+  fill: var(--icon-focus);
+}
