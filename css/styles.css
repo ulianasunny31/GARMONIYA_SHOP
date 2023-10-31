@@ -1,12 +1,12 @@
 :root {
   --main-font: "IBM Plex Sans", sans-serif;
   --body-color: #f6ebfc;
-  --dark-purple: #591182;
+  --dark-purple: #3e0b5b;
   --logo-color: #f2f5cf;
   --logo-focus: #d6d9b1;
   --light-text-color: #f9f9f3;
   --icon-color: #e8bde6;
-  --icon-focus: #c49fc3;
+  --icon-focus: #e088dc;
 }
 
 h1,
@@ -149,6 +149,20 @@ body {
 }
 
 .logo-p-container {
+  margin-right: 50px;
+}
+
+.p-footer {
+  color: var(--light-text-color);
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.phone-addr-container {
+  margin-right: 70px;
 }
 
 .p-a-list-item {
@@ -172,5 +186,31 @@ body {
 
 .p-a-icon:focus,
 .p-a-icon:hover {
+  fill: var(--icon-focus);
+}
+
+.social-list-item {
+  display: flex;
+  align-items: center;
+}
+
+.social-link {
+  color: var(--light-text-color);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.social-icon {
+  fill: var(--icon-color);
+}
+
+.social-icon:focus,
+.social-icon:hover {
   fill: var(--icon-focus);
 }
