@@ -42,16 +42,27 @@
             </li>
           </ul>
         </nav>
-        <a href="">
+        <a class="shop-cart" href="">
           <svg class="cart-icon" width="40" height="40">
             <use href="./images/icons.svg#icon-shopping-cart"></use>
           </svg>
         </a>
  
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+
       </div>
     </header>
  
     <main>
+      
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, eaque, nemo laborum molestias nisi dolorum mollitia vel impedit nostrum perspiciatis ratione. Vel voluptas ad inventore est totam ducimus vitae ratione.
         Quas dolores sit, voluptatum corrupti porro esse, nemo neque ullam blanditiis, reprehenderit non consequuntur ut excepturi cum. Corrupti odio quaerat doloremque. Vitae corporis obcaecati harum velit, nihil vel dicta beatae.
         Ipsum officiis dolores ad soluta, sit, delectus reprehenderit deserunt excepturi libero veniam at perferendis nihil rem sint eveniet veritatis? Sapiente quis accusamus modi facilis error aliquid odio, fuga quidem sed?
@@ -75,7 +86,7 @@
     Iste ipsam, dignissimos aspernatur, aliquid facere quam, sed ipsum dolorem eum repellat accusantium! Officia voluptatem, ipsum repellendus mollitia aliquam, illo quaerat autem voluptatum nobis nisi molestias, laborum consequatur laboriosam modi!
     </main>
  
- 
+ <!-- FOOTER -->
     <footer class="footer">
         <div class="container footer-container">
             <div class="logo-p-container"> 
@@ -123,7 +134,7 @@
                 <li class="social-list-item">
                     <a class="link social-link" href="https://www.facebook.com/sporttovarpervomaysk/">
                         <svg class="social-icon" width="24" height="24"><use href="./images/icons.svg#icon-facebook"></use></svg>
-                    <p class="p-social">Facebook</p>
+                    <p class="p-a-social">Facebook</p>
                     </a>
                 </li>
                 <li class="social-list-item">
@@ -137,6 +148,57 @@
         </div>
     </footer>
  
+
+        <!-- MENU SCRIPT -->
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="modal-close js-close-menu">
+        <svg class="close-button-icon" width="8" height="8">
+          <use href="./images/icons.svg#icon-close-black"></use>
+        </svg>
+      </button>
+
+          <ul class="list menu-list">
+            <li class="menu-list-item">
+              <a class="link menu-link" href="">Головна</a>
+            </li>
+            <li class="menu-list-item">
+              <a class="link menu-link" href="">Товари</a>
+            </li>
+            <li class="menu-list-item">
+              <a class="link menu-link" href="">Про нас</a>
+            </li>
+            <li class="menu-list-item">
+              <a class="link menu-link" href="">Контакти</a>
+            </li>
+          </ul>
+
+        <ul class="list menu-social-list">
+          <li class="menu-social-list-item">
+            <a class="link menu-social-link" href="https://www.instagram.com/garmonia_pervomaysk/">
+              <svg class="menu-icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+            </a>
+          </li>
+          <li class="menu-social-list-item">
+            <a class="link menu-social-link" href="https://www.facebook.com/sporttovarpervomaysk/">
+              <svg class="menu-icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+            </a>
+             
+          </li>
+          <li class="menu-social-list-item">
+            <a class="link menu-social-link" href=" ">            
+              <svg class="menu-icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-mail"></use>
+            </svg></a>
+ 
+          </li>
+        </ul>
+      </div>
+<script src="./js/mobile-menu.js"></script>
   </body>
 </html>
 
