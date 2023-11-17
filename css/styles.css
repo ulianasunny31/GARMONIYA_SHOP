@@ -4,12 +4,14 @@
   --dark-purple: #3e0b5b;
   --logo-color: #f2f5cf;
   --logo-focus: #d6d9b1;
+  --nav-focus: #dededa;
   --light-text-color: #f9f9f3;
   --icon-color: #e8bde6;
   --icon-focus: #e088dc;
   --light-color: #eee7f1;
   --dark-color: #3a393b;
   --menu-body: #dba2fa;
+  --bright-color: #9c04c4;
 }
 
 h1,
@@ -133,7 +135,7 @@ body {
 
 .nav-link:hover,
 .nav-link:focus {
-  color: #dededa;
+  color: var(--nav-focus);
 }
 
 .cart-icon {
@@ -542,5 +544,81 @@ body {
     display: flex;
     align-items: flex-end;
     margin-bottom: 0;
+  }
+}
+
+/**
+  |============================
+  | ABOUT US PAGE
+  |============================
+*/
+
+.about-us-section {
+  padding: 60px 0 80px 0;
+}
+
+.about-header {
+  font-size: 26px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: var(--dark-purple);
+}
+
+.about-text {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--dark-purple);
+}
+.last-p-about {
+  font-weight: 500;
+  color: var(--bright-color);
+  margin-bottom: 30px;
+}
+
+.shop-pic {
+  border-radius: 4px;
+}
+
+/* Media */
+
+@media screen and (min-width: 768px) {
+  .about-us-section {
+    padding: 80px 0 100px 0;
+  }
+
+  .about-header {
+    font-size: 30px;
+  }
+
+  .about-text {
+    margin-bottom: 20px;
+  }
+
+  .last-p-about {
+    font-weight: 500;
+    color: var(--bright-color);
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .about-us-section {
+    padding: 100px 0 150px 0;
+  }
+
+  .about-header {
+    font-size: 36px;
+  }
+
+  .about-text {
+    margin-bottom: 30px;
+  }
+  .last-p-about {
+    margin-bottom: 50px;
   }
 }
