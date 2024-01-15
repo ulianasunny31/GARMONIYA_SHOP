@@ -12,6 +12,7 @@
   --dark-color: #3a393b;
   --menu-body: #dba2fa;
   --bright-color: #9c04c4;
+  --dark-accent: #7c069b;
 }
 
 h1,
@@ -635,6 +636,32 @@ body {
 
 .contacts-info {
   margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-list-item {
+  display: flex;
+  gap: 10px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--dark-purple);
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.contact-list-link {
+  font-weight: 700;
+  color: var(--dark-purple);
+  cursor: pointer;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-list-link:hover,
+.contact-list-link:focus {
+  color: var(--bright-color);
+  transform: scale(1.1);
 }
 
 .feedback-form {
@@ -659,7 +686,8 @@ body {
   background-color: transparent;
   padding: 20px;
   outline: transparent;
-  border: 1px solid var(--icon-focus);
+  border: 1px solid var(--bright-color);
+  color: var(--dark-color);
 }
 
 .number-input::placeholder {
@@ -671,12 +699,13 @@ body {
 }
 
 .submit-btn {
-  height: 41px;
+  height: 41.5px;
   min-width: 100px;
   cursor: pointer;
   font-family: inherit;
   border: none;
-  background-color: var(--icon-focus);
+  border-radius: 0 3px 3px 0;
+  background-color: var(--bright-color);
   color: var(--light-text-color);
   font-size: 14px;
   font-weight: 400;
@@ -684,8 +713,73 @@ body {
   letter-spacing: 0.02em;
 }
 
+.submit-btn:hover,
+.submit-btn:focus {
+  background-color: var(--dark-accent);
+}
+
+@media screen and (min-width: 768px) {
+  .contact-section {
+    padding: 80px 30px 80px 30px;
+  }
+
+  .contacts-info {
+    margin-bottom: 60px;
+  }
+
+  .contact-list-item {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .form-header {
+    font-size: 25px;
+  }
+
+  .number-input {
+    height: 42px;
+  }
+
+  .number-input::placeholder {
+    font-size: 16px;
+  }
+
+  .submit-btn {
+    height: 42.5px;
+    min-width: 150px;
+    font-size: 16px;
+  }
+}
+
 @media screen and (min-width: 1158px) {
   .contact-section {
-    padding: 100px 0 500px 0;
+    padding: 100px 60px 100px 60px;
+  }
+
+  .contacts-info {
+    margin-bottom: 70px;
+  }
+
+  .contact-list-item {
+    font-size: 38px;
+    margin-bottom: 12px;
+  }
+
+  .form-header {
+    font-size: 30px;
+  }
+
+  .number-input {
+    height: 44px;
+  }
+
+  .number-input::placeholder {
+    font-size: 18px;
+  }
+
+  .submit-btn {
+    height: 44.5px;
+    min-width: 160px;
+    font-size: 18px;
   }
 }
