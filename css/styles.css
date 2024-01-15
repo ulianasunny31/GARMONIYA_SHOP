@@ -631,7 +631,7 @@ body {
 */
 
 .contact-section {
-  padding: 80px 0 80px 0;
+  padding: 110px 0 120px 0;
 }
 
 .contacts-info {
@@ -720,7 +720,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .contact-section {
-    padding: 80px 30px 80px 30px;
+    padding: 110px 30px 120px 30px;
   }
 
   .contacts-info {
@@ -753,7 +753,7 @@ body {
 
 @media screen and (min-width: 1158px) {
   .contact-section {
-    padding: 100px 60px 100px 60px;
+    padding: 130px 60px 130px 60px;
   }
 
   .contacts-info {
@@ -770,16 +770,16 @@ body {
   }
 
   .number-input {
-    height: 44px;
+    height: 46px;
   }
 
   .number-input::placeholder {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .submit-btn {
-    height: 44.5px;
+    height: 46.5px;
     min-width: 160px;
-    font-size: 18px;
+    font-size: 20px;
   }
 }
