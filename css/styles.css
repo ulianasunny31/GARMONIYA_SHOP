@@ -237,7 +237,6 @@ body {
 .menu-container {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   position: fixed;
   top: 0;
   left: 0;
@@ -278,6 +277,7 @@ body {
 
 .menu-list {
   gap: 40px;
+  margin-bottom: auto;
 }
 
 .menu-list-item {
