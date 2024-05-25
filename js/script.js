@@ -1,7 +1,7 @@
-//Показ вторых картинок при ховере
-document.querySelectorAll(".volley-list li").forEach((item) => {
-  const imgOne = item.querySelector("#image-one");
-  const imgTwo = item.querySelector("#image-two");
+// Показ вторых картинок при ховере
+document.querySelectorAll(".balls-list li").forEach((item) => {
+  const imgOne = item.querySelector(".image-one");
+  const imgTwo = item.querySelector(".image-two");
 
   function mouseIn() {
     imgTwo.classList.replace("not-visible", "visible");
@@ -13,6 +13,6 @@ document.querySelectorAll(".volley-list li").forEach((item) => {
     imgOne.classList.replace("not-visible", "visible");
   }
 
-  imgOne.addEventListener("mouseover", mouseIn);
-  imgTwo.addEventListener("mouseout", mouseOut);
+  item.addEventListener("mouseover", mouseIn);
+  item.addEventListener("mouseout", mouseOut);
 });
