@@ -891,7 +891,7 @@ main {
   font-weight: bolder;
 }
 
-.volley-list {
+.balls-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -901,7 +901,7 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-  .volley-list {
+  .balls-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -912,7 +912,7 @@ main {
   .categ-container {
     padding: 20px 30px;
   }
-  .volley-list {
+  .balls-list {
     justify-content: flex-start;
     column-gap: 40px;
     row-gap: 30px;
@@ -928,7 +928,7 @@ main {
     font-size: 17px;
   }
 
-  .volley-list {
+  .balls-list {
     column-gap: 30px;
     row-gap: 30px;
   }
@@ -943,7 +943,7 @@ main {
     font-size: 18px;
   }
 
-  .volley-list {
+  .balls-list {
     justify-content: center;
     column-gap: 50px;
     row-gap: 40px;
