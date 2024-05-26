@@ -16,3 +16,29 @@ document.querySelectorAll(".balls-list li").forEach((item) => {
   item.addEventListener("mouseover", mouseIn);
   item.addEventListener("mouseout", mouseOut);
 });
+
+//Категории товаров
+const categories = document.querySelectorAll(".categories-list li");
+const refs = {
+  mainCont: document.querySelector(".categ-container"),
+  balls: document.querySelector("balls-container"),
+};
+
+categories.forEach((item) => {
+  const category = item.textContent;
+  console.log(category);
+  switch (category) {
+    case "М'ячі":
+      break;
+    case "Форма":
+      break;
+    case "Нагороди":
+      break;
+    case "Кемпінг":
+      break;
+    case "Настільні ігри":
+      break;
+    case "Інше":
+      break;
+  }
+});
