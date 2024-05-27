@@ -862,7 +862,7 @@ main {
   }
 }
 
-.balls-container img {
+.categ-container img {
   width: 200px;
   height: 200px;
   margin-bottom: 10px;
@@ -872,13 +872,14 @@ main {
   width: 180px;
 }
 
-.balls-container li {
+.categ-container li {
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 250px;
+  height: 250px;
   padding-bottom: 8px;
   padding-top: 8px;
   box-shadow: 0px 6px 7px 0px rgba(146, 130, 163, 0.4);
@@ -922,9 +923,10 @@ main {
 .goods-name-p {
   font-size: 15px;
   font-weight: bolder;
+  text-align: center;
 }
 
-.balls-list {
+.categ-container ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -934,7 +936,7 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-  .balls-list {
+  .categ-container ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -950,7 +952,7 @@ main {
   .categ-container {
     padding: 20px 30px;
   }
-  .balls-list {
+  .categ-container ul {
     justify-content: flex-start;
     column-gap: 40px;
     row-gap: 30px;
@@ -966,7 +968,7 @@ main {
     font-size: 17px;
   }
 
-  .balls-list {
+  .categ-container ul {
     column-gap: 30px;
     row-gap: 30px;
     margin-bottom: 40px;
@@ -982,7 +984,7 @@ main {
     font-size: 18px;
   }
 
-  .balls-list {
+  .categ-container ul {
     justify-content: center;
     column-gap: 50px;
     row-gap: 40px;
