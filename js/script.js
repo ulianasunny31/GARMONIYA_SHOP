@@ -10,13 +10,19 @@ document
 const categories = document.querySelectorAll(".categories-list li");
 const refs = {
   mainCont: document.querySelector(".categ-container"),
-  balls: document.querySelector("balls-container"),
+  balls: document.querySelector(".balls-container"),
+  categList: document.querySelector(".categories-list"),
 };
 
 //??? НЕПРАВИЛЬНО НУЖЕН ОБРАБОТЧИК НАЖАТИЯ
-categories.forEach((item) => {
-  const category = item.textContent;
-  console.log(category);
+categList.addEventListener("click", showCategoryProducts);
+
+function showCategoryProducts(e) {
+  e.preventDefault();
+
+  const categName = e.target.closest(".categ-name");
+  const category = categName.textContent;
+
   switch (category) {
     case "М'ячі":
       break;
@@ -31,7 +37,7 @@ categories.forEach((item) => {
     case "Інше":
       break;
   }
-});
+}
 
 function showAndHide(i) {
   const imgOne = i.querySelector(".image-one");
