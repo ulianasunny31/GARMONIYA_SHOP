@@ -10,6 +10,10 @@ document
 document
   .querySelectorAll(".boardgames-list li")
   .forEach((item) => showAndHide(item));
+
+document
+  .querySelectorAll(".uniform-list li")
+  .forEach((item) => showAndHide(item));
 //Категории товаров
 const categories = document.querySelectorAll(".categories-list li");
 const refs = {
