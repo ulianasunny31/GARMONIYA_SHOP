@@ -14,6 +14,14 @@ document
 document
   .querySelectorAll(".uniform-list li")
   .forEach((item) => showAndHide(item));
+
+document
+  .querySelectorAll(".camping-list li")
+  .forEach((item) => showAndHide(item));
+
+document
+  .querySelectorAll(".other-list li")
+  .forEach((item) => showAndHide(item));
 //Категории товаров
 const categories = document.querySelectorAll(".categories-list li");
 const refs = {
