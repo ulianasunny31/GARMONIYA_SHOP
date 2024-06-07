@@ -19,9 +19,6 @@ document
   .querySelectorAll(".camping-list li")
   .forEach((item) => showAndHide(item));
 
-document
-  .querySelectorAll(".fight-equip-list-list li")
-  .forEach((item) => showAndHide(item));
 //Категории товаров
 const categories = document.querySelectorAll(".categories-list li");
 const refs = {
@@ -31,7 +28,6 @@ const refs = {
   rewards: document.querySelector(".rewards-container"),
   camping: document.querySelector(".camping-container"),
   boardgames: document.querySelector(".boardgames-container"),
-  fightequip: document.querySelector(".fight-equip-list-container"),
   categList: document.querySelector(".categories-list"),
 };
 
@@ -72,9 +68,6 @@ function showCategoryProducts(e) {
       break;
     case "Настільні ігри":
       refs.boardgames.style.display = "block";
-      break;
-    case "Інше":
-      refs.fightequip.style.display = "block";
       break;
   }
 }
