@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Гармонія</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=IBM+Plex+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container header-container">
+        <a class="link logo-link" href="./index.html">GARMONIYA</a>
+        <nav class="navigation">
+          <ul class="list nav-list">
+            <li class="nav-list-item">
+              <a class="link nav-link current" href="./index.html ">Головна</a>
+            </li>
+            <li class="nav-list-item">
+              <a class="link nav-link" href="./goods.html">Товари</a>
+            </li>
+            <li class="nav-list-item">
+              <a class="link nav-link" href="./about-us.html">Про нас</a>
+            </li>
+            <li class="nav-list-item">
+              <a class="link nav-link" href="./contact.html">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="shop-cart" href="">
+          <svg class="cart-icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-shopping-cart"></use>
+          </svg>
+        </a>
+
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="header-menu-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="logo-p-container">
+          <a class="link f-logo logo-link" href="./index.html">GARMONIYA</a>
+          <p class="p-footer">"Спорт - це наш стиль життя."</p>
+        </div>
+
+        <div class="phone-addr-container">
+          <ul class="list p-a-list">
+            <li class="p-a-list-item">
+              <svg class="p-a-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+              <a class="link p-a-link" href="tel:+380973421617">
+                +38 (097) 342 16 17
+              </a>
+            </li>
+            <li class="p-a-list-item">
+              <svg class="p-a-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+              <a class="link p-a-link" href="tel:+380978333513"
+                >+38 (097) 833 35 13
+              </a>
+            </li>
+            <li class="p-a-list-item">
+              <svg class="p-a-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-map"></use>
+              </svg>
+              <a
+                target="_blank"
+                class="link p-a-link"
+                href="https://www.google.com/maps/dir//49.837230,+24.035886/@49.8371708,23.9534384,12z/data=!4m6!4m5!1m0!1m3!2m2!1d24.035886!2d49.83723?hl=uk-UK&entry=ttu"
+              >
+                <p>вул. Коротченка, ТК «Хуторок», магазин 30</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="socials-container">
+          <ul class="list social-list">
+            <li class="social-list-item">
+              <a target="_blank" class="link social-link" href="mailto:">
+                <svg class="social-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-mail"></use>
+                </svg>
+                <p class="p-a-social">Email</p>
+              </a>
+            </li>
+            <li class="social-list-item">
+              <a
+                target="_blank"
+                class="link social-link"
+                href="https://www.facebook.com/sporttovarpervomaysk/"
+              >
+                <svg class="social-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+                <p class="p-a-social">Facebook</p>
+              </a>
+            </li>
+            <li class="social-list-item">
+              <a
+                target="_blank"
+                class="link social-link"
+                href="https://www.instagram.com/garmonia_pervomaysk/"
+              >
+                <svg class="social-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+                <p class="p-a-social">garmonia_pervomaysk</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MENU SCRIPT -->
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="modal-close js-close-menu">
+        <svg class="close-button-icon" width="8" height="8">
+          <use href="./images/icons.svg#icon-close-black"></use>
+        </svg>
+      </button>
+
+      <ul class="list menu-list">
+        <li class="menu-list-item">
+          <a class="link menu-link" href="./index.html">Головна</a>
+        </li>
+        <li class="menu-list-item">
+          <a class="link menu-link" href="./goods.html">Товари</a>
+        </li>
+        <li class="menu-list-item">
+          <a class="link menu-link" href="./about-us.html">Про нас</a>
+        </li>
+        <li class="menu-list-item">
+          <a class="link menu-link" href="./contact.html">Контакти</a>
+        </li>
+      </ul>
+
+      <ul class="list menu-social-list">
+        <li class="menu-social-list-item">
+          <a
+            target="_blank"
+            class="link menu-social-link"
+            href="https://www.instagram.com/garmonia_pervomaysk/"
+          >
+            <svg class="menu-icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="menu-social-list-item">
+          <a
+            target="_blank"
+            class="link menu-social-link"
+            href="https://www.facebook.com/sporttovarpervomaysk/"
+          >
+            <svg class="menu-icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="menu-social-list-item">
+          <a target="_blank" class="link menu-social-link" href=" ">
+            <svg class="menu-icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-mail"></use></svg
+          ></a>
+        </li>
+      </ul>
+    </div>
+    <script type="module" src="./js/cart.js"></script>
+  </body>
+</html>
