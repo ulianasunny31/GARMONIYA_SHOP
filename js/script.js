@@ -89,3 +89,37 @@ function showAndHide(i) {
   i.addEventListener("mouseover", mouseIn);
   i.addEventListener("mouseout", mouseOut);
 }
+
+//
+// GOODS
+// HTML
+//
+
+const addBTns = document.querySelectorAll(".add-to-cart-btn");
+
+addBTns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    //Нужный элемент-товар
+    const product = btn.closest("li");
+
+    //Инф о товаре
+    const productName = product.querySelector(".goods-name-p").textContent;
+    const productPrice = product.querySelector(".price-div p").textContent;
+    const picture = product.querySelector(".image-one").src;
+
+    const fullProduct = {
+      name: productName,
+      price: productPrice,
+      picture,
+    };
+
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push(fullProduct);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    // console.log("Товар добавлен в корзину:", fullProduct);
+    // console.log("Текущая корзина:", cart);
+  });
+});
