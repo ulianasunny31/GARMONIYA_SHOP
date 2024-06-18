@@ -106,13 +106,15 @@ addBTns.forEach((btn) => {
 
     //Инф о товаре
     const productName = product.querySelector(".goods-name-p").textContent;
-    const productPrice = product.querySelector(".price-div p").textContent;
     const picture = product.querySelector(".image-one").src;
+    const productPriceText = product.querySelector(".price-div p").textContent;
+    const productPrice = parseFloat(productPriceText.replace(/[^0-9.-]+/g, ""));
     const productId = generateUniqueId(productName, productPrice);
 
     const fullProduct = {
       name: productName,
       price: productPrice,
+      priceText: productPriceText,
       id: productId,
       picture,
       quantity: 1,
@@ -127,6 +129,8 @@ addBTns.forEach((btn) => {
     } else {
       cart.push(fullProduct);
     }
+
+    console.log(fullProduct.price, fullProduct.priceText);
 
     localStorage.setItem("cart", JSON.stringify(cart));
     console.log("Товар добавлен в корзину:", fullProduct);
