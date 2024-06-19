@@ -1,7 +1,8 @@
 const myCart = document.querySelector(".my-cart-list");
 const cartSection = document.querySelector(".main-cart-section");
-const totalSum = document.querySelector(".total-span");
-
+const totalSumSpan = document.querySelector(".total-span");
+let sum = 0;
+let totalSum = 0;
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 if (cart.length === 0) {
@@ -12,10 +13,12 @@ if (cart.length === 0) {
 
 cart.forEach((product) => {
   renderItem(product);
-
-  console.log(product.price, product.priceText);
+  summing(product);
 });
 
+totalSumSpan.textContent = totalSum;
+
+//Rendering items in the cart
 function renderItem(product) {
   const productHTML = `
   <li class="cart-product">
@@ -38,4 +41,10 @@ function renderItem(product) {
   `;
 
   myCart.insertAdjacentHTML("beforeend", productHTML);
+}
+
+function summing(product) {
+  sum = product.price * product.quantity;
+
+  return (totalSum += sum);
 }
