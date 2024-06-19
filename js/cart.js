@@ -48,3 +48,16 @@ function summing(product) {
 
   return (totalSum += sum);
 }
+
+//
+//
+//
+
+// Находит все элементы с классом .my-cart-list
+const cartListItems = document.querySelectorAll(".my-cart-list li");
+
+// Если есть хотя бы один элемент
+if (cartListItems.length > 0) {
+  // У последнего элемента устанавливает margin-bottom: 0
+  cartListItems[cartListItems.length - 1].style.marginBottom = "0";
+}

@@ -1105,6 +1105,8 @@ main {
   border: 0.5px solid var(--bright-purple);
   background-color: var(--light-purple);
   cursor: pointer;
+  width: 25px;
+  height: 25px;
 }
 
 .cart-item-btns button:hover,
@@ -1121,6 +1123,7 @@ main {
 
 .cart-product-remove svg {
   opacity: 60%;
+  fill: var(--dark-color2);
 }
 
 .total-sum-div {
@@ -1162,4 +1165,110 @@ main {
     transform: none;
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
+}
+
+@media screen and (min-width: 375px) {
+  .cart-flex-div {
+    gap: 160px;
+  }
+
+  .cart-item-btns button {
+    font-size: 20px;
+    width: 27px;
+    height: 27px;
+  }
+
+  .cart-product-name {
+    font-size: 16px;
+  }
+
+  .cart-product-price {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .cart-flex-div {
+    gap: 200px;
+  }
+
+  .cart-product-name {
+    font-size: 18px;
+  }
+
+  .cart-product-price {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-cart-section {
+    padding: 40px 0px 100px;
+  }
+  .main-cart-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  .my-cart-list {
+    border-top: 1px solid var(--dark-color);
+    border-right: 1px solid var(--dark-color);
+    padding-top: 10px;
+    margin-bottom: 0;
+    width: 550px;
+  }
+
+  .cart-product {
+    display: flex;
+    gap: 15px;
+    border-bottom: 1px solid var(--dark-color);
+    margin-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-bottom: 8px;
+    min-height: 100px;
+  }
+
+  .cart-flex-div {
+    gap: 250px;
+  }
+
+  .total-sum-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 300px;
+  }
+
+  .total-heading {
+    font-size: 26px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1558px) {
+  .main-cart-section {
+    padding: 40px 0px 100px;
+  }
+
+  .main-cart-container {
+    gap: 50px;
+  }
+
+  .my-cart-list {
+    width: 650px;
+  }
+
+  .cart-flex-div {
+    gap: 420px;
+  }
+
+  .total-heading {
+    font-size: 28px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1440px) {
 }
