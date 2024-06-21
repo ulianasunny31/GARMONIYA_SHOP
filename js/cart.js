@@ -3,7 +3,11 @@ const cartSection = document.querySelector(".main-cart-section");
 const totalSumSpan = document.querySelector(".total-span");
 let sum = 0;
 let totalSum = 0;
+
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+myCart.addEventListener("click", changeQuantity);
+myCart.addEventListener("click", removeFromCart);
 
 if (cart.length === 0) {
   cartSection.innerHTML = `
@@ -39,8 +43,6 @@ function recalculateTotalSum() {
 //
 //
 
-myCart.addEventListener("click", changeQuantity);
-
 function changeQuantity(e) {
   e.stopPropagation();
   e.preventDefault();
@@ -50,8 +52,6 @@ function changeQuantity(e) {
   if (!productItem) return;
   const ID = productItem.dataset.id;
   const product = cart.find((item) => item.id === ID);
-
-  console.log(ID, product);
 
   const addBtn = target.closest(".cart-product-add");
   const reduceBtn = target.closest(".cart-product-reduce");
@@ -95,7 +95,32 @@ if (cartListItems.length > 0) {
 //
 //
 //
+function removeFromCart(e) {
+  e.stopPropagation();
+  e.preventDefault();
+  const target = e.target;
 
+  const productItem = target.closest(".cart-product");
+  if (!productItem) return;
+  const ID = productItem.dataset.id;
+  const product = cart.find((item) => item.id === ID);
+
+  const remover = target.closest(".cart-product-remove");
+
+  if (!remover) return;
+  const index = cart.findIndex((item) => item.id === ID);
+  cart.splice(index, 1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  productItem.remove();
+
+  recalculateTotalSum();
+
+  if (cart.length === 0) {
+    cartSection.innerHTML = `
+    <h1 class="empty-heading">Ваш кошик пустий.</h1>
+    `;
+  }
+}
 //
 //
 

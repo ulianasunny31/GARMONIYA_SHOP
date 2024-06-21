@@ -1218,8 +1218,7 @@ main {
 
   .my-cart-list {
     border-top: 1px solid var(--dark-color);
-    border-right: 1px solid var(--dark-color);
-    padding-top: 10px;
+    padding-top: 0px;
     width: 550px;
   }
 
@@ -1227,10 +1226,12 @@ main {
     display: flex;
     gap: 15px;
     border-bottom: 1px solid var(--dark-color);
-    margin-bottom: 10px;
+    border-right: 1px solid var(--dark-color);
+    margin-bottom: 0px;
     padding-left: 20px;
     padding-right: 10px;
     padding-bottom: 8px;
+    padding-top: 10px;
     min-height: 100px;
   }
 
@@ -1305,7 +1306,6 @@ main {
 
   .my-cart-list {
     width: 700px;
-    border-left: 1px solid var(--dark-color);
   }
 
   .cart-flex-div {
@@ -1323,6 +1323,7 @@ main {
 
   .cart-product {
     min-height: 120px;
+    border-left: 1px solid var(--dark-color);
   }
 
   .cart-product-name {
