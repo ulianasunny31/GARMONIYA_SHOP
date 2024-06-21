@@ -1220,7 +1220,6 @@ main {
     border-top: 1px solid var(--dark-color);
     border-right: 1px solid var(--dark-color);
     padding-top: 10px;
-    margin-bottom: 0;
     width: 550px;
   }
 
