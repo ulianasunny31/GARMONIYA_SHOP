@@ -13,7 +13,7 @@ function slideShow() {
 
   images[value - 1].style.display = 'block';
 
-  setTimeout(slideShow, 2000);
+  setTimeout(slideShow, 3000);
 }
 
 slideShow();

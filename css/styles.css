@@ -1341,6 +1341,28 @@ main {
   }
 }
 
+/**
+  |============================
+  | INDEX PAGE STYLES
+  |============================
+*/
+
+.slideshow-section {
+  padding: 20px 0 30px;
+}
+
+.main-heading {
+  font-size: 24px;
+  text-align: center;
+  color: var(--dark-color2);
+  margin-bottom: 10px;
+}
+
+.main-heading span {
+  color: var(--dark-purple);
+  text-transform: uppercase;
+}
+
 .slideshow-div img {
   width: 500px;
   display: none;
