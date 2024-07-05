@@ -314,12 +314,17 @@ main {
 }
 
 .menu-list {
-  gap: 40px;
+  list-style: none;
+  padding: 0;
   margin-bottom: auto;
 }
 
 .menu-list-item {
   margin-bottom: 25px;
+}
+
+.menu-list-item:nth-last-child(1) {
+  margin-top: 45px;
 }
 
 .menu-link {
