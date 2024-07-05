@@ -130,6 +130,12 @@ addBTns.forEach((btn) => {
       cart.push(fullProduct);
     }
 
+    product.classList.add('adding-to-cart');
+
+    setTimeout(() => {
+      product.classList.remove('adding-to-cart');
+    }, 500);
+
     console.log(fullProduct.price, fullProduct.priceText);
 
     localStorage.setItem('cart', JSON.stringify(cart));

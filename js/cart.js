@@ -1,13 +1,13 @@
-const myCart = document.querySelector(".my-cart-list");
-const cartSection = document.querySelector(".main-cart-section");
-const totalSumSpan = document.querySelector(".total-span");
+const myCart = document.querySelector('.my-cart-list');
+const cartSection = document.querySelector('.main-cart-section');
+const totalSumSpan = document.querySelector('.total-span');
 let sum = 0;
 let totalSum = 0;
 
-const cart = JSON.parse(localStorage.getItem("cart")) || [];
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-myCart.addEventListener("click", changeQuantity);
-myCart.addEventListener("click", removeFromCart);
+myCart.addEventListener('click', changeQuantity);
+myCart.addEventListener('click', removeFromCart);
 
 if (cart.length === 0) {
   cartSection.innerHTML = `
@@ -36,7 +36,7 @@ function recalculateTotalSum() {
 
   totalSumSpan.textContent = totalSum;
 
-  localStorage.setItem("cart", JSON.stringify(cart));
+  localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 //
@@ -48,13 +48,13 @@ function changeQuantity(e) {
   e.preventDefault();
   const target = e.target;
 
-  const productItem = target.closest(".cart-product");
+  const productItem = target.closest('.cart-product');
   if (!productItem) return;
   const ID = productItem.dataset.id;
   const product = cart.find((item) => item.id === ID);
 
-  const addBtn = target.closest(".cart-product-add");
-  const reduceBtn = target.closest(".cart-product-reduce");
+  const addBtn = target.closest('.cart-product-add');
+  const reduceBtn = target.closest('.cart-product-reduce');
 
   if (addBtn) {
     product.quantity += 1;
@@ -65,7 +65,7 @@ function changeQuantity(e) {
   if (product.quantity === 0) {
     const index = cart.findIndex((item) => item.id === ID);
     cart.splice(index, 1);
-    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem('cart', JSON.stringify(cart));
     productItem.remove();
   }
 
@@ -75,7 +75,7 @@ function changeQuantity(e) {
     `;
   }
 
-  const quantityElem = productItem.querySelector(".cart-product-quantity");
+  const quantityElem = productItem.querySelector('.cart-product-quantity');
   quantityElem.textContent = product.quantity;
 
   recalculateTotalSum();
@@ -85,12 +85,12 @@ function changeQuantity(e) {
 //
 //
 // Находит все элементы с классом .my-cart-list
-const cartListItems = document.querySelectorAll(".my-cart-list li");
+const cartListItems = document.querySelectorAll('.my-cart-list li');
 
 // Если есть хотя бы один элемент
 if (cartListItems.length > 0) {
   // У последнего элемента устанавливает margin-bottom: 0
-  cartListItems[cartListItems.length - 1].style.marginBottom = "0";
+  cartListItems[cartListItems.length - 1].style.marginBottom = '0';
 }
 //
 //
@@ -100,25 +100,28 @@ function removeFromCart(e) {
   e.preventDefault();
   const target = e.target;
 
-  const productItem = target.closest(".cart-product");
+  const productItem = target.closest('.cart-product');
   if (!productItem) return;
+
   const ID = productItem.dataset.id;
-  const product = cart.find((item) => item.id === ID);
 
-  const remover = target.closest(".cart-product-remove");
-
+  const remover = target.closest('.cart-product-remove');
   if (!remover) return;
-  const index = cart.findIndex((item) => item.id === ID);
-  cart.splice(index, 1);
-  localStorage.setItem("cart", JSON.stringify(cart));
-  productItem.remove();
 
+  const index = cart.findIndex((item) => item.id === ID);
+
+  if (index !== -1) {
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }
+
+  productItem.remove();
   recalculateTotalSum();
 
   if (cart.length === 0) {
     cartSection.innerHTML = `
-    <h1 class="empty-heading">Ваш кошик пустий.</h1>
-    `;
+      <h1 class="empty-heading">Ваш кошик пустий.</h1>
+      `;
   }
 }
 //
@@ -146,5 +149,5 @@ function renderItem(product) {
   </li>
   `;
 
-  myCart.insertAdjacentHTML("beforeend", productHTML);
+  myCart.insertAdjacentHTML('beforeend', productHTML);
 }

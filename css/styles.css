@@ -1129,6 +1129,7 @@ main {
   border-radius: 10px;
   border: 0.5px solid var(--bright-purple);
   background-color: var(--light-purple);
+  color: var(--dark-color);
   cursor: pointer;
   width: 25px;
   height: 25px;
@@ -1197,6 +1198,20 @@ main {
     transform: none;
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
+}
+
+@keyframes added-to-cart {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.adding-to-cart {
+  animation: added-to-cart 0.5s ease-in-out;
 }
 
 @media screen and (min-width: 375px) {
