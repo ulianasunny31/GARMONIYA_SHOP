@@ -56,6 +56,26 @@ img {
   display: block;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--dark-purple);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-purple);
+}
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -1517,39 +1537,42 @@ main {
 }
 
 @media screen and (min-width: 1440px) {
+  .slideshow-section {
+    padding: 40px 0px 30px;
+  }
+
   .additional-info-section {
-    padding: 40px 5px 60px;
+    padding: 40px 50px 60px;
   }
 
   .main-heading {
     width: 300px;
   }
 
-  .additional-info-section {
-    padding: 40px 10px 60px;
-  }
-
   .additional-info-heading {
-    font-size: 27px;
+    font-size: 32px;
     margin-bottom: 30px;
   }
 
   .additional-info-section h4 {
-    font-size: 21px;
+    font-size: 24px;
+    margin-bottom: 30px;
   }
 
   .info-step-list {
-    font-size: 20px;
-    gap: 15px;
+    font-size: 22px;
+    gap: 25px;
     width: 80%;
-    margin: 0 auto 25px;
+    margin: 0 auto 27px;
   }
 
   .additional-info-section p {
-    font-size: 19px;
+    font-size: 22px;
   }
 
   .slideshow-div img {
-    height: 600px;
+    width: 90%;
+    height: 700px;
+    margin: 0 auto;
   }
 }
